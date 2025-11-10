@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<img src="photo.jpg" id="mushroom" style="width: 400px; height: 400px; position: absolute; left: 0; top: 0;">
+
+<script>
+var im = document.getElementById('mushroom');
+
+window.addEventListener('load', () => {
+  im.style.position = 'absolute';
+  im.style.left = '0px';
+  im.style.top = '0px';
+});
+
+document.onkeydown = function(e) {
+  switch(e.key) {
+    case "a": // Зүүн тийш
+      im.style.left = parseInt(im.style.left) - 100 + "px";
+      break;
+    case "d": // Баруун тийш
+      im.style.left = parseInt(im.style.left) + 100 + "px";
+      break;
+    case "w": // Дээшээ
+      im.style.top = parseInt(im.style.top) - 100 + "px";
+      break;
+    case "s": // Доошоо
+      im.style.top = parseInt(im.style.top) + 100 + "px";
+      break;
+  }
+}
+</script>
+</body>
+</html>
